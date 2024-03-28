@@ -1,0 +1,10 @@
+FROM docker.io/kubeflow/mpi-horovod-mnist
+
+WORKDIR "/examples"
+
+COPY dataset/ /examples/
+
+RUN rm -rf /examples/tensorflow_mnist.py
+
+# Get example python scripts
+COPY tensorflow_mnist.py /examples

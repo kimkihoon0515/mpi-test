@@ -13,8 +13,6 @@ ENV PYTHON_VERSION=${python}
 # Set default shell to /bin/bash
 SHELL ["/bin/bash", "-cu"]
 
-RUN apt-get install ca-certificates
-
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
         cmake \
